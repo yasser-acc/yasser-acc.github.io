@@ -5,7 +5,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $subject = $_POST['subject'];
     $message = $_POST['message'];
 
-    // Set up the email parameters
+    // email parameters Set up
     $to = 'yasserdigi@gmail.com';  // Replace with your email address
     $headers = "From: $name <$email>";
     $body = "Subject: $subject\n\n$message";
@@ -13,10 +13,5 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     // Send the email
     $success = mail($to, $subject, $body, $headers);
 
-    if ($success) {
-        echo 'Message sent successfully!';
-    } else {
-        echo 'An error occurred while sending the message.';
-    }
 }
 ?>
