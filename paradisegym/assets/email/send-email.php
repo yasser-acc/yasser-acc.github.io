@@ -13,5 +13,8 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     // Send the email
     $success = mail($to, $subject, $body, $headers);
 
+    header("Location: ../../index.html");
+    exit();
+
 }
 ?>
